@@ -1,0 +1,32 @@
+{
+  "name": "simple-auth",
+  "version": "1.0.0",
+  "description": "example doing relatively simple password protection with next.js",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/freeman-lab/simple-auth.git"
+  },
+  "author": "freeman-lab",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/freeman-lab/simple-auth/issues"
+  },
+  "homepage": "https://github.com/freeman-lab/simple-auth#readme",
+  "dependencies": {
+    "@theme-ui/presets": "^0.3.0",
+    "jsonwebtoken": "^8.5.1",
+    "next": "^9.4.4",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "safe-compare": "^1.1.4",
+    "swr": "^0.2.3",
+    "theme-ui": "^0.3.1"
+  }
+}
