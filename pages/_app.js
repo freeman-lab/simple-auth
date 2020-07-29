@@ -3,7 +3,7 @@ import { ThemeProvider } from 'theme-ui'
 import { SessionProvider } from '../lib/session'
 import theme from '../theme'
 
-export default ({ Component, pageProps }) => {
+const App = ({ Component, pageProps }) => {
   const [session, setSession] = useState({ token: null, username: null })
   return (
     <SessionProvider session={session} setSession={setSession}>
@@ -13,3 +13,5 @@ export default ({ Component, pageProps }) => {
     </SessionProvider>
   )
 }
+
+export default App
