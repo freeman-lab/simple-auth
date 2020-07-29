@@ -8,7 +8,7 @@ function Index() {
       <Text sx={{ fontSize: [6] }}>
         This page is public.
       </Text>
-      <NextLink href='/private' passHref={true}>
+      <NextLink href='/private' prefetch={false} passHref={true}>
         <Link sx={{ fontSize: [4], display: 'block', mt: [4] }}>
           To private page.
         </Link>
