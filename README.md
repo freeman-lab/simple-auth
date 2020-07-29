@@ -6,7 +6,7 @@ Try the [demo](https://simple-auth-ten.vercel.app/)
 
 ## motivation
 
-There are a lot of good libraries and examples for doing user authentication with `next.js`. Most of these use cases involve authenatication against third-party services (like Auth0) which in turn assume fairly complex user models, and the need to store user sessions in local storage or cookies.
+There are a lot of good libraries and examples for doing user authentication with `next.js`. Most of these use cases involve authenatication against third-party services (like Auth0) which in turn assume fairly complex user models, and assume you want to store user sessions in local storage or cookies.
 
 In many cases, it's useful to have something much simpler and more transient, and more analogous to [HTTP Basic Authentication](https://en.wikipedia.org/wiki/Basic_access_authentication) — for example, sharing early versions of a site privately with users or clients. You want the content behind a password, but it's for previewing, with no user data, and you don't have or want any user management.
 
