@@ -14,23 +14,25 @@ Unfortunately, combining HTTP basic auth with `next.sj` and `vercel` is tricky, 
 
 ## approach
 
-This repo documents a relatively simple approach to password authentication. It's based entirely on basic `next.js` features and the really nice [`swr`](https://github.com/vercel/swr) library. There are just three components that should be easy to add to any `next.js` app.
+This repo documents a relatively simple approach to password authentication. It's based entirely on basic `next.js` features and the really nice [`swr`](https://github.com/vercel/swr) library. 
 
-`pages/api/auth.js`
+There are just three components that should be easy to add to any `next.js` app.
+
+#### `pages/api/auth.js`
 
 An tiny API for requesting a temporary token given a password via a `POST`, and then confirming authentication status via a `GET`. Predetermined username/password combinations are stored on the server and specified via environmental variables.
 
-`pages/login.js`
+#### `pages/login.js`
 
 A page for logging in using the above API.
 
-`lib/auth.js`
+#### `lib/auth.js`
 
 A `useAuth` hook for accessing the current authentication state, which uses `swr` under the hood. Also includes a higher-order-component `withAuth` for wrapping any page that needs authentication to view.
 
-`lib/session.js`
+#### `lib/session.js`
 
-A react `context` for storing and setting a session token across components.
+A `react` `context` for storing and setting a session token across components.
 
 ## usage
 
