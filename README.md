@@ -8,7 +8,7 @@ There are a lot of good libraries and examples for doing user authentication wit
 
 In many cases, it's useful to have something much simpler and more transient, and more analogous to [HTTP Basic Authentication] -- for example, sharing early versions of a site with users or clients. You want the content behind a password, but it's for one-time viewing, and you don't have or want any user management.
 
-Unfortunately, due to its limitations around custom servers, combining HTTP basic auth with `next.sj` and `vercel` is tricky.
+Unfortunately, due to its limitations around custom servers, combining HTTP basic auth with `next.sj` and `vercel` is tricky. And while `vercel` offers a paid option for adding simple password protection, it's expensive at $150/mo, and only applies to the site as a whole, not to individual pages.
 
 ## approach
 
@@ -41,7 +41,7 @@ Then, for any page you want authenticated, just wrap the exported component insi
 
 ## inspiration
 
-I spent a lot of time looking at the following libraries and examples to figure this out, thanks to all those contributing to them
+I spent a lot of time looking at the following libraries, thanks to all those contributing to them!
 - https://github.com/nextauthjs/next-auth
 - https://github.com/vvo/next-iron-session
 - https://github.com/vercel/next.js/discussions/10724#discussioncomment-726
