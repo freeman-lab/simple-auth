@@ -2,6 +2,8 @@
 
 Example of relatively simple password protection with `next.js`
 
+Try the [demo](https://simple-auth-ten.vercel.app/)
+
 ## motivation
 
 There are a lot of good libraries and examples for doing user authentication with `next.js`. Most of these use cases involve authenatication against third-party services (like Auth0) which in turn assume fairly complex user models, and the need to store user sessions in local storage or cookies.
