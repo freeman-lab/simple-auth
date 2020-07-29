@@ -14,7 +14,7 @@ Unfortunately, combining HTTP basic auth with `next.sj` and `vercel` is tricky, 
 
 ## approach
 
-This repo documents a relatively simple approach to password based authentication. It's based entirely on basic `next.js` features and the really nice [`swr`](https://github.com/vercel/swr) library. There are just three components that should be easy to add to any `next.js` app.
+This repo documents a relatively simple approach to password authentication. It's based entirely on basic `next.js` features and the really nice [`swr`](https://github.com/vercel/swr) library. There are just three components that should be easy to add to any `next.js` app.
 
 `pages/api/auth.js`
 
