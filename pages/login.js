@@ -44,7 +44,7 @@ function Login({ origin }) {
   return (
     <Layout status={status}>
       <Text sx={{ fontSize: [6] }}>
-        This page is private
+        Please login
       </Text>
       <Text sx={{ my: [3], fontSize: [4] }}>
         Enter a password to continue
@@ -73,17 +73,10 @@ function Login({ origin }) {
           onClick={submit}
           type='submit'
           sx={{
-            color: 'text',
-            mr: [3],
-            fontSize: [3],
-            mt: [4],
-            cursor: 'pointer',
             '&:hover': {
               background: disabled ? 'muted' : 'primary',
             },
-            bg: 'primary',
-            px: [2],
-            py: [1]
+            mt: [3]
           }}
         >
         Submit

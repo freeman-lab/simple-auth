@@ -5,7 +5,7 @@ const secret = process.env.JWT_SECRET
 
 const users = [
   {
-    username: 'username',
+    username: 'dwolo',
     password: process.env.PASSWORD,
   },
 ]
