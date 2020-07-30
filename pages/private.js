@@ -1,8 +1,6 @@
-import { Box, Button, sHeading, Text, Link } from 'theme-ui'
+import { Box, Link } from 'theme-ui'
 import { withAuth } from '../lib/auth'
 import { default as NextLink } from 'next/link'
-import { useSession } from '../lib/session'
-import { useAuth } from '../lib/auth'
 import Layout from '../components/layout'
 
 function Private() {

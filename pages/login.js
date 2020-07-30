@@ -1,12 +1,12 @@
 import { Box, Text, Input, Button } from 'theme-ui'
 import { useRouter } from 'next/router'
 import { useState } from 'react'
-import { useSession } from '../lib/session'
+import { useToken } from '../lib/token'
 import Layout from '../components/layout'
 
 function Login({ origin }) {
   const router = useRouter()
-  const [, setSession] = useSession()
+  const [, setToken] = useToken()
   const [status, setStatus] = useState(null)
   const [password, setPassword] = useState('')
 
@@ -31,7 +31,7 @@ function Login({ origin }) {
       }, 1000)
     } else {
       const { username, token } = await res.json()
-      setSession({ token: token, username: username })
+      setToken(token)
       setStatus('authenticating')
       if (redirect) {
         router.push(redirect)

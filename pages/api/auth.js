@@ -17,7 +17,7 @@ export default function handler(req, res) {
       const token = jwt.sign({ username: user.username }, secret, {
         expiresIn: '1h',
       })
-      res.status(200).json({ username: user.username, token: token })
+      res.status(200).json({ token: token })
     } else {
       res.status(403).json({ message: 'password not recognized' })
     }
@@ -29,7 +29,7 @@ export default function handler(req, res) {
       const decoded = jwt.verify(token, secret)
       res.status(200).json({ username: decoded.username, authed: true })
     } catch (err) {
-      res.status(403).json({ authed: false })
+      res.status(403).json({ username: null, authed: false })
     }
   }
 }

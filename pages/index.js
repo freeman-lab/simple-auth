@@ -1,4 +1,4 @@
-import { Box, Heading, Text, Link, Button } from 'theme-ui'
+import { Box, Text, Link } from 'theme-ui'
 import { default as NextLink } from 'next/link'
 import Layout from '../components/layout'
 

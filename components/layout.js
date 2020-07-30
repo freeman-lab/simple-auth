@@ -1,18 +1,18 @@
 import { Box, Text, Button, Link, Grid } from 'theme-ui'
 import { default as NextLink } from 'next/link'
-import { useSession } from '../lib/session'
+import { useToken } from '../lib/token'
 import { useAuth } from '../lib/auth'
 
 const Layout = ({ children, status }) => {
-  const [ session, setSession ] = useSession()
-  const { authed } = useAuth()
+  const [ , setToken ] = useToken()
+  const { authed, username } = useAuth()
 
   const user = authed ?
-    `Logged in as ${session.username}` :
+    `Logged in as ${username}` :
     `Logged out`
 
   const logout = () => {
-    setSession({ token: null, username: null })
+    setToken(null)
   }
 
   return (
@@ -42,7 +42,7 @@ const Layout = ({ children, status }) => {
           }
           {!authed &&
             <NextLink href='/login' passHref={true}>
-              <Link onClick={logout}>
+              <Link>
                 Login
               </Link>
             </NextLink>

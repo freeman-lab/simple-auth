@@ -1,16 +1,16 @@
 import { useState } from 'react'
 import { ThemeProvider } from 'theme-ui'
-import { SessionProvider } from '../lib/session'
+import { TokenProvider } from '../lib/token'
 import theme from '../theme'
 
 const App = ({ Component, pageProps }) => {
-  const [session, setSession] = useState({ token: null, username: null })
+  const [token, setToken] = useState(null)
   return (
-    <SessionProvider session={session} setSession={setSession}>
+    <TokenProvider token={token} setToken={setToken}>
       <ThemeProvider theme={theme}>
         <Component {...pageProps} />
       </ThemeProvider>
-    </SessionProvider>
+    </TokenProvider>
   )
 }
 
