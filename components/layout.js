@@ -4,11 +4,11 @@ import { useSession } from '../lib/session'
 import { useAuth } from '../lib/auth'
 
 const Layout = ({ children, status }) => {
-  const [ session, setSession ] = useSession()
-  const { authed } = useAuth()
+  const [ , setSession ] = useSession()
+  const { authed, username } = useAuth()
 
   const user = authed ?
-    `Logged in as ${session.username}` :
+    `Logged in as ${username}` :
     `Logged out`
 
   const logout = () => {
