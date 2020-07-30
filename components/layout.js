@@ -1,4 +1,4 @@
-import { Box, Text, Button, Link, Grid } from 'theme-ui'
+import { Box, Text, Link, Grid } from 'theme-ui'
 import { default as NextLink } from 'next/link'
 import { useSession } from '../lib/session'
 import { useAuth } from '../lib/auth'
