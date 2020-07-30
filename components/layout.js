@@ -1,10 +1,10 @@
 import { Box, Text, Link, Grid } from 'theme-ui'
 import { default as NextLink } from 'next/link'
-import { useSession } from '../lib/session'
+import { useToken } from '../lib/token'
 import { useAuth } from '../lib/auth'
 
 const Layout = ({ children, status }) => {
-  const [ , setSession ] = useSession()
+  const [ , setToken ] = useToken()
   const { authed, username } = useAuth()
 
   const user = authed ?
@@ -12,7 +12,7 @@ const Layout = ({ children, status }) => {
     `Logged out`
 
   const logout = () => {
-    setSession({ token: null, username: null })
+    setToken(null)
   }
 
   return (

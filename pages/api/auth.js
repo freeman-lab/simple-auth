@@ -17,7 +17,7 @@ export default function handler(req, res) {
       const token = jwt.sign({ username: user.username }, secret, {
         expiresIn: '1h',
       })
-      res.status(200).json({ username: user.username, token: token })
+      res.status(200).json({ token: token })
     } else {
       res.status(403).json({ message: 'password not recognized' })
     }
